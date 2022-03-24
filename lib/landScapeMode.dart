@@ -12,19 +12,25 @@ class LandScapeMode extends StatelessWidget {
         backgroundColor: Colors.purple,
         title: Text('SECOND ASSIGNMENT'),
       ),
-      body: Container(
-        color: Colors.white,
-        width: MediaQuery.of(context).size.width * 0.5,
-        child: Column(
-          children: [
-            SizedBox(height: MediaQuery.of(context).size.height / 7,),
-            myContainer("FIRST ELEMENT"),
-            myContainer("SECOND ELEMENT"),
-            myContainer("THIRD ELEMENT"),
-            myContainer("FORTH ELEMENT"),
-            myContainer("FIFTH ELEMENT"),
-          ],
-        ),
+      body: Row(
+        children: [
+          Container(
+            color: Colors.white,
+            width: MediaQuery.of(context).size.width /2,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: MediaQuery.of(context).size.height / 8,),
+                myContainer("FIRST ELEMENT"),
+                myContainer("SECOND ELEMENT"),
+                myContainer("THIRD ELEMENT"),
+                myContainer("FORTH ELEMENT"),
+                myContainer("FIFTH ELEMENT"),
+              ],
+            ),
+          ),
+          Container(color: Colors.red, width:MediaQuery.of(context).size.width /2,),
+        ],
       ),
     );
   }
@@ -35,7 +41,7 @@ class LandScapeMode extends StatelessWidget {
         text,
         style: const TextStyle(color: Colors.black, fontSize: 20),
       ),
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       alignment: Alignment.topLeft,
     );
   }
